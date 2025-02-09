@@ -35,7 +35,7 @@
         <nav class="secondaryNav">
             <div class="leftNav">
                 <div class="logo">
-                    <a href="http://"><img src="" alt=""></a>
+                    <a href="http://"><img src="/assets/images/logo.png" alt=""></a>
                     <a href="http://">Flower Store</a>
                 </div>
                 <div class="secondaryLinks">
@@ -69,11 +69,25 @@
             </div>
             <div class="image-slider">
                 <img src="/assets/images/bg1(1).jpg" alt="">
+                <img src="/assets/images/pinkFlowers.jpg" alt="">
             </div>
         </div>
     </div>
 
 </div>
 
+
+<script>
+// Select all images in the image slider
+const sliderImages = document.querySelectorAll('.image-slider img');
+
+// Loop through each image and add a click event listener
+sliderImages.forEach((image) => {
+    image.addEventListener('click', function() {
+        // Update the background image of the .titlePage with the clicked image's source
+        document.querySelector('.titlePage').style.backgroundImage = `url(${image.src})`;
+    });
+});
+</script>
 </body>
 </html>
